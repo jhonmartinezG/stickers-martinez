@@ -1,3 +1,7 @@
+
+# Test the README file assing some texts
+## Hello, this is my online store.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
