@@ -6,7 +6,7 @@
 
 In this project I'm using Tailwind CSS as my CSS framework
 
-![Screenshot](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwebdesign.tutsplus.com%2Fes%2Ftutorials%2Fhow-to-create-a-responsive-form-using-tailwindcss--cms-34128&psig=AOvVaw2Vq5GWndg2PXogURn4vaGn&ust=1643424079256000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjRyqy10_UCFQAAAAAdAAAAABAD)
+
 
 So, once you download this repo run:
 
