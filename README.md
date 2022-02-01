@@ -7,7 +7,6 @@
 In this project I'm using Tailwind CSS as my CSS framework
 
 
-
 So, once you download this repo run:
 
 ### `npm install`

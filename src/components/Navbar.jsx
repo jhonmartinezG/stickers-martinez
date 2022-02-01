@@ -1,4 +1,5 @@
 import logo from '../assets/logo.png';
+import CartWidget from './CartWidget';
 
 const Navbar = () => {
     return (
@@ -10,7 +11,11 @@ const Navbar = () => {
                 <h1 className='text-white hover:underline decoration-yellow decoration-2 cursor-pointer'>Quiénes Somos</h1>
                 <h1 className='text-white hover:underline decoration-yellow decoration-2 cursor-pointer'>Contáctenos</h1>
             </div >
-            <button className='text-white bg-gradient-to-r from-purple to-pink w-24 h-9 rounded-full hover:saturate-200'>Regístrate</button>
+            <div className='flex justify-between items-center w-44'>
+                <button className='text-white bg-gradient-to-r from-purple to-pink w-24 h-9 rounded-full hover:saturate-200'>Regístrate</button>
+                <CartWidget initialValue={1} />
+            </div>
+
         </div >
     )
 }
