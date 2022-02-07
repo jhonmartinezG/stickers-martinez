@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Silla from '../assets/silla.jpg';
 
 
-const ItemCount = ({ productName, initalValue, stock}) => {
+
+const ItemCount = ({ productName, initalValue, stock, img}) => {
 
     let [counter, setCounter] = useState(initalValue);
 
@@ -17,7 +17,7 @@ const ItemCount = ({ productName, initalValue, stock}) => {
     return (
         <div className="flex flex-col border my-10 mx-5 border-2">
             <div className="flex flex-col items-center pb-2 border border-b-2 ">
-                <img className="w-60 h-60" src={Silla} alt="" />
+                <img className="w-60 h-60" src={img} alt="" />
                 <p>{productName}</p>
             </div>
             <div className="flex justify-around items-center py-2 bg-gray-light ">
