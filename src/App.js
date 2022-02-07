@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div>
+    <div className='flex flex-col'>
       <Navbar />
       <ItemListContainer greeting="Welcome to Jaus Store" />
     </div>
