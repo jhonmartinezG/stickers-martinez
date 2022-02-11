@@ -3,20 +3,32 @@ import CartWidget from './CartWidget';
 
 const Navbar = () => {
     return (
-        <div className='lg bg-blue text-center text-white h-20 flex  px-20 justify-between items-center shadow-md shadow-gray-dark'>
-            <img src={logo} className='w-12 rounded-full cursor-pointer' alt='logo - company' ></img>
-            <div className='flex justify-between w-4/12 px-100 text-sm ' >
-                <h1 className='text-white hover:underline decoration-yellow decoration-2 cursor-pointer' >Home</h1>
-                <h1 className='text-white hover:underline decoration-yellow decoration-2 cursor-pointer'>Tienda</h1>
-                <h1 className='text-white hover:underline decoration-yellow decoration-2 cursor-pointer'>Quiénes Somos</h1>
-                <h1 className='text-white hover:underline decoration-yellow decoration-2 cursor-pointer'>Contáctenos</h1>
-            </div >
-            <div className='flex justify-between items-center w-44'>
-                <button className='text-white bg-gradient-to-r from-purple to-pink w-24 h-9 rounded-full hover:saturate-200'>Regístrate</button>
-                <CartWidget initialValue={1} />
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div>
+                    <img className='img-thumbnail img-fluid rounded-circle cursor-pointer' style={{ width: '70px' }} src={logo} alt="" />
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex justify-around" id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link " href="#" >Quienese Somos</a>
+                        </li>
+                    </ul>
+                </div>
+                <CartWidget />
             </div>
-
-        </div >
+        </nav>
     )
 }
 

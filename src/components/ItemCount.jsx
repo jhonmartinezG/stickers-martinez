@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 
 
-const ItemCount = ({ productName, initalValue, stock, img}) => {
+const ItemCount = ({initalValue, stock}) => {
 
     let [counter, setCounter] = useState(initalValue);
 
      const incrementNumber = () => {
-         counter < stock ? setCounter(counter + 1) : setCounter(counter = stock)
+         counter < stock && setCounter(counter + 1)
      }
 
      const decrementNumber = () => {
@@ -15,11 +15,7 @@ const ItemCount = ({ productName, initalValue, stock, img}) => {
      }
 
     return (
-        <div className="flex flex-col border my-10 mx-5 border-2">
-            <div className="flex flex-col items-center pb-2 border border-b-2 ">
-                <img className="w-60 h-60" src={img} alt="" />
-                <p>{productName}</p>
-            </div>
+        <div className="flex flex-col border my-10 mx-4 border-2">
             <div className="flex justify-around items-center py-2 bg-gray-light ">
                 <button className="font-extrabold text-sky text-2xl" onClick={incrementNumber}>+</button>
                 <p>{counter}</p>
