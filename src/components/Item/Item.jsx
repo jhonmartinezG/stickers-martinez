@@ -1,12 +1,12 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({ id, img, title, description, price, initalValue, stock }) => {
   return (
       <div className='mx-4 flex flex-col justify-center'> 
         <ul>
             <li key={id}>
-                <div className="card" style={{ width: '18rem', height: '13rem' }}>
+                <div className="card" style={{ width: '18rem', height: '10rem' }}>
                     <img src={img} className="card-img-top" alt={title} />
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>

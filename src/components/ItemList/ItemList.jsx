@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Item from './Item'
+import Item from '../Item/Item'
 
 const ItemList = () => {
 
@@ -34,6 +34,15 @@ const ItemList = () => {
         initalValue: 1,
         stock: 7
     },
+    {
+      id: 100,
+      title: "Mesa de noche",
+      description: "Mesa de noche fabricada en chapilla de roble francés y pintada con pintura a base de agua, acabado natural y poro semi-abierto. Cuenta con dos cajones de apertura con riel y un entrepaño bajo.  No incluye accesorios ni decoración",
+      price: 950000,
+      pictureUrl: "https://cdn.shopify.com/s/files/1/0318/3188/3907/products/WhatsAppImage2021-04-29at8.26.30AM_4_720x.jpg",
+      initalValue: 1,
+      stock: 7
+    }
   ]
 
   useEffect(() => {
@@ -53,7 +62,7 @@ const ItemList = () => {
   }, [])
 
   return (
-    <div className='flex'>
+    <div className='d-flex relative  '>
       {
         info && info.map((item) => (
           <Item 
