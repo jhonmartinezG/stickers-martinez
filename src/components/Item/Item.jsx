@@ -17,8 +17,8 @@ const Item = ({ id, img, title, description, price, initalValue, stock }) => {
                     </div>
                 </div>
             </li>
-    </ul>
-  </div>
+        </ul>
+      </div>
   )
 }
 
