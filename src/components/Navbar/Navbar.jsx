@@ -1,28 +1,30 @@
 import logo from '../../assets/logo.png';
 import CartWidget from '../CartWidget/CartWidget';
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container-fluid">
                 <div>
-                    <img className='img-thumbnail img-fluid rounded-circle cursor-pointer' style={{ width: '70px' }} src={logo} alt="" />
+                    <Link to={'/'} >
+                        <img className='img-thumbnail img-fluid rounded-circle cursor-pointer' style={{ width: '70px' }} src={logo} alt="" />
+                    </Link>
                 </div>
                 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse flex justify-around" id="navbarNav">
-                    <ul class="navbar-nav">
-                        
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                <div className="collapse navbar-collapse flex justify-around" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link className="nav-link" to={'/'}>Inicio</Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Tienda</a>
+                        <li className="nav-item">
+                            <Link className="nav-link" to={'/cart/checkout'} >Tienda</Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link " href="#" >Quienes Somos</a>
+                        <li className="nav-item">
+                            <Link className="nav-link" to={'/quienessomos'} >Quienes Somos</Link>
                         </li>
                     </ul>
                 </div>
