@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
+
 
 
 
 const ItemCount = ({initalValue, stock}) => {
 
     let [counter, setCounter] = useState(initalValue);
+    const [isClicked, setIsClicked] = useState(false)
 
      const incrementNumber = () => {
          counter < stock && setCounter(counter + 1)
@@ -17,21 +20,30 @@ const ItemCount = ({initalValue, stock}) => {
 
      const addItemCart = () => {
         Swal.fire(
-            'Producto agregado',
-            `Se han agregado ${counter} productos al carrito`,
+            'Productos agregado al carrito',
+            `Tus ${counter} productos han sido agregados al`,
             'success'
-          )
+        )
+        setIsClicked(true)
      }
+
 
     return (
         <div className="flex flex-col border my-10 mx-4 border-2 w-52">
-            <div className="flex justify-around items-center py-2 bg-gray-light ">
-                <button className="font-extrabold text-sky text-2xl" onClick={incrementNumber}>+</button>
-                <p>{counter}</p>
-                <button className="font-extrabold text-sky text-2xl" onClick={decrementNumber}>-</button>
-                
-            </div>
-            <button className="btn btn-primary" onClick={() => addItemCart()} >Agregar al carrito</button>
+            
+                { !isClicked && <div className="flex flex-col">
+                        <div className="flex justify-around items-center py-2 bg-gray-light ">
+                            <button className="font-extrabold text-sky text-2xl" onClick={incrementNumber}>+</button>
+                            <p>{counter}</p>
+                            <button className="font-extrabold text-sky text-2xl" onClick={decrementNumber}>-</button>
+                        </div>
+                        <button className="btn btn-primary" onClick={() => addItemCart()} >Agregar al carrito</button>
+                    </div>
+                }
+                { isClicked && <div className="flex flex-col">
+                    <NavLink to={"/cart"} ><button className="btn btn-primary">Ir al carrito de compras</button></NavLink> 
+                </div>
+                }
         </div>
     )
 }

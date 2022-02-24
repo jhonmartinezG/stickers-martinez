@@ -1,14 +1,20 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { useParams } from 'react-router-dom';
+import { CartContext } from '../../context/CartProvider';
 import ItemList from '../ItemList/ItemList';
+
 
 
 
 const ItemListContainer = ({ greeting }) => {
 
-    const [info, setInfo] = useState(null)
+  const { name } = useContext(CartContext)
 
-    const { category } = useParams()
+  console.log('context', name)
+
+  const [info, setInfo] = useState(null)
+
+  const { category } = useParams()
 
     const data = [
       {
@@ -96,9 +102,6 @@ const ItemListContainer = ({ greeting }) => {
       })
     }, [])
 
-    console.log(info)
-
-   
 
     return (
         <div className="flex p-2 flex-col justify-center items-center ">
