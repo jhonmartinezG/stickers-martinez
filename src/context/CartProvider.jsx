@@ -7,6 +7,7 @@ const CartProvider = ({ children }) => {
 
     const [arrayProducts, setArrayProducts] = useState([])
 
+
   return (
     <CartContext.Provider value={{arrayProducts, setArrayProducts}}>
         {children}
