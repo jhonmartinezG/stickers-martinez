@@ -1,14 +1,14 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
 
 export const CartContext = createContext()
 
 const CartProvider = ({ children }) => {
 
-    const name = 'Sebitas'
+    const [arrayProducts, setArrayProducts] = useState([])
 
   return (
-    <CartContext.Provider value={{name}}>
+    <CartContext.Provider value={{arrayProducts, setArrayProducts}}>
         {children}
     </CartContext.Provider>
   )

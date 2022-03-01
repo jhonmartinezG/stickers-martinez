@@ -10,7 +10,6 @@ function App() {
       <CartProvider>
         <Rutas />
       </CartProvider>
-        
     </div>
   );
 }

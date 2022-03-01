@@ -8,9 +8,7 @@ import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({ greeting }) => {
 
-  const { name } = useContext(CartContext)
 
-  console.log('context', name)
 
   const [info, setInfo] = useState(null)
 
@@ -101,7 +99,6 @@ const ItemListContainer = ({ greeting }) => {
         console.log(err);
       })
     }, [])
-
 
     return (
         <div className="flex p-2 flex-col justify-center items-center ">

@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
+import CartProvider, { CartContext } from "../../context/CartProvider";
 
 
 
 
-const ItemCount = ({initalValue, stock}) => {
+
+const ItemCount = ({initalValue, stock, dataList}) => {
+
 
     let [counter, setCounter] = useState(initalValue);
     const [isClicked, setIsClicked] = useState(false)
@@ -27,6 +30,20 @@ const ItemCount = ({initalValue, stock}) => {
         setIsClicked(true)
      }
 
+     const { arrayProducts, setArrayProducts } = useContext(CartContext)
+
+
+     const addElement = () => {
+         const objectItem = {
+             id: dataList.id,
+             title: dataList.title,
+             cuantity: counter,
+             price: dataList.price,
+             image: dataList.pictureUrl
+         }
+         setArrayProducts([...arrayProducts, objectItem ])
+         console.log(arrayProducts)
+     }
 
     return (
         <div className="flex flex-col border my-10 mx-4 border-2 w-52">
@@ -41,7 +58,7 @@ const ItemCount = ({initalValue, stock}) => {
                     </div>
                 }
                 { isClicked && <div className="flex flex-col">
-                    <NavLink to={"/cart"} ><button className="btn btn-primary">Ir al carrito de compras</button></NavLink> 
+                    <NavLink to={"/cart"} ><button className="btn btn-primary" onClick={() => addElement()}>Ir al carrito de compras</button></NavLink> 
                 </div>
                 }
         </div>

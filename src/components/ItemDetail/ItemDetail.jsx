@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../../context/CartProvider'
 import ItemCount from '../ItemCount/ItemCount'
-
 
 
 const ItemDetail = ({ data }) => {
 
-  
+  console.log(data.id)
 
   return (
     <div key={data.id} className="card my-40" style={{ maxWidth: '1500px'}}>
@@ -18,7 +18,7 @@ const ItemDetail = ({ data }) => {
             <h2 className="card-text">{data.title}</h2>
             <h3 className="card-title">{data.description}</h3>
             <h3 className="card-title">{`$ ${data.price}`}</h3>
-            <ItemCount initalValue={data.initalValue} stock={data.stock}/>
+            <ItemCount initalValue={data.initalValue} stock={data.stock} dataList={data}/>
           </div>
         </div>
       </div>

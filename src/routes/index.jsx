@@ -8,11 +8,6 @@ import Home from '../container/Home/Home';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import Cart from '../components/Cart/Cart';
 
-
-
-
-
-
 const Rutas = () => {
   return (
     <BrowserRouter>
