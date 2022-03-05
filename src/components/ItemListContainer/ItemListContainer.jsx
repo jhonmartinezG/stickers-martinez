@@ -92,7 +92,6 @@ const ItemListContainer = ({ greeting }) => {
           );
           return setInfo(categoryList);
         } 
-
         return setInfo(response)
       })
       .catch((err) => {
@@ -102,7 +101,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <div className="flex p-2 flex-col justify-center items-center ">
-            <h1 className='text-6xl font-extrabold underline hover:underline decoration-sky decoration-8 py-8'>{greeting}</h1>
+            <h1 className='text-6xl font-extrabold underline hover:underline decoration-brown decoration-8 py-8'>{greeting}</h1>
             <div className='d-flex flex-wrap'>
                 <ItemList data={info}/>
             </div>
