@@ -1,11 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from "../../context/CartProvider";
+import CartDetail from './components/CartDetail';
+
 
 
 
 const Cart = () => {
-  const { arrayProducts, setArrayProducts, cuantity, setCuantity } = useContext(CartContext)
+  const { arrayProducts, setArrayProducts, cuantity, setCuantity, total, setTotal } = useContext(CartContext)
+
 
   const clear = () => {
     setArrayProducts([])
@@ -17,7 +20,9 @@ const Cart = () => {
     const product = arrayProducts.filter(item => item.id == id)
 
     setCuantity(cuantity - product[0].cuantity)
+    setTotal(total - (product[0].price * product[0].cuantity))
   }
+
 
   return (
   <div>
@@ -31,7 +36,8 @@ const Cart = () => {
         </Link>
       </div>
         : 
-        <div>
+        <div className='flex justify-between wrap'>
+          <div>
           <button type="button" className="btn btn-danger m-4" onClick={() => clear()}>Vaciar carrito</button>
           <div className='flex'>
             {arrayProducts.map(item => (
@@ -43,12 +49,18 @@ const Cart = () => {
                       <h5>{`$ ${item.price}`} </h5>
                       <h5>{`cantidad: ${item.cuantity}`} </h5>
                     </div>
-                  <button type="button" class="btn btn-danger" onClick={() => deleteItem(item.id)}>Eliminar</button>
-                </div>
+                      <button type="button" class="btn btn-danger" onClick={() => deleteItem(item.id)}>Eliminar</button>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className='w-28'>
+              <CartDetail total={total} shipping={20000} />
+            </div>
           </div>
-        </div>
+          
+        
       } 
     </div>
   </div>

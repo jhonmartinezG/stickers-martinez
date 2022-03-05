@@ -32,9 +32,11 @@ const ItemCount = ({initalValue, stock, dataList}) => {
         setArrayProducts([...arrayProducts, objectItem ])
 
         setCuantity(cuantity + counter)
+
+        setTotal(total + (dataList.price * counter))
      }
 
-     const { arrayProducts, setArrayProducts, cuantity, setCuantity, isInCart } = useContext(CartContext)
+     const { arrayProducts, setArrayProducts, cuantity, setCuantity, isInCart, total, setTotal } = useContext(CartContext)
 
      arrayProducts.length <= 0 && setCuantity(0)
 
