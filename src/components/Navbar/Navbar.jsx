@@ -21,9 +21,6 @@ const Navbar = () => {
                             <Link className="nav-link" to={'/'}>Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to={'/cart/checkout'} >Tienda</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link className="nav-link" to={'/quienessomos'} >Quienes Somos</Link>
                         </li>
                     </ul>

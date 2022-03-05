@@ -15,25 +15,19 @@ const Cart = () => {
     setArrayProducts(arrayProducts.filter(item => item.id !== id))
     
     const product = arrayProducts.filter(item => item.id == id)
-    console.log('producto', product[0].cuantity)
 
     setCuantity(cuantity - product[0].cuantity)
   }
-
-  arrayProducts.filter(item => console.log(item.id))
-  
-
-  console.log(arrayProducts)
 
   return (
   <div>
     
     <div className='flex flex-wrap'>
     {
-      arrayProducts.length <= 0 ? <div>
-        <h1>Carrito vacio, vuelve a la tienda y agrega productos</h1>
+      arrayProducts.length <= 0 ? <div className='flex flex-col justify-center items-center w-full'>
+        <h1 className='my-10'>Carrito vacio, vuelve a la tienda y agrega productos</h1>
         <Link to={'/'} >
-            <button type="button" class="btn btn-info">Vuelve al inicio y agrega productos</button>  
+            <button type="button" className="btn btn-info my-10">Vuelve al inicio y agrega productos</button>  
         </Link>
       </div>
         : 

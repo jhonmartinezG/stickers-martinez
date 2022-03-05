@@ -5,7 +5,6 @@ import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({ data }) => {
 
-  console.log(data.id)
 
   return (
     <div key={data.id} className="card my-40" style={{ maxWidth: '1500px'}}>

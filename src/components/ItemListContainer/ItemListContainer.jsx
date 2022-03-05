@@ -103,7 +103,7 @@ const ItemListContainer = ({ greeting }) => {
         <div className="flex p-2 flex-col justify-center items-center ">
             <h1 className='text-6xl font-extrabold underline hover:underline decoration-brown decoration-8 py-8'>{greeting}</h1>
             <div className='d-flex flex-wrap'>
-                <ItemList data={info}/>
+                <ItemList  data={info}/>
             </div>
         </div>
     );

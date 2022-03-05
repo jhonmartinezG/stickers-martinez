@@ -7,7 +7,7 @@ import Loading from '../Loading/Loading'
 const ItemList = ({ data }) => {
 
   return (
-    <div className='d-flex relative  '>
+    <div className='flex flex-wrap items-center justify-center '>
       {
         data ? data.map((item) => (
           <Item 

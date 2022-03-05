@@ -3,10 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
 import CartProvider, { CartContext } from "../../context/CartProvider";
 
-
-
-
-
 const ItemCount = ({initalValue, stock, dataList}) => {
 
 
@@ -34,7 +30,6 @@ const ItemCount = ({initalValue, stock, dataList}) => {
             image: dataList.pictureUrl
         }
         setArrayProducts([...arrayProducts, objectItem ])
-        console.log(arrayProducts)
 
         setCuantity(cuantity + counter)
      }
