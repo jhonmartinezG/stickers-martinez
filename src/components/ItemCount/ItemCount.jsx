@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
 import CartProvider, { CartContext } from "../../context/CartProvider";
 
-const ItemCount = ({initalValue, stock, dataList}) => {
+const ItemCount = ({initalValue, stock, data}) => {
 
 
     let [counter, setCounter] = useState(initalValue);
@@ -23,17 +23,17 @@ const ItemCount = ({initalValue, stock, dataList}) => {
             'success'
         )
         const objectItem = {
-            id: dataList.id,
-            title: dataList.title,
+            id: data[0].id,
+            title: data[0].title,
             cuantity: counter,
-            price: dataList.price,
-            image: dataList.pictureUrl
+            price: data[0].price,
+            image: data[0].pictureUrl
         }
         setArrayProducts([...arrayProducts, objectItem ])
 
         setCuantity(cuantity + counter)
 
-        setTotal(total + (dataList.price * counter))
+        setTotal(total + (data[0].price * counter))
      }
 
      const { arrayProducts, setArrayProducts, cuantity, setCuantity, isInCart, total, setTotal } = useContext(CartContext)
@@ -44,7 +44,7 @@ const ItemCount = ({initalValue, stock, dataList}) => {
     return (
         <div>
             <div className="flex flex-col mx-4 w-52">
-                { !isInCart(dataList.id) && <div className="flex flex-col">
+                { !isInCart(data[0].id) && <div className="flex flex-col">
                         <div className="flex justify-around items-center py-2 bg-gray-light ">
                             <button className="font-extrabold text-sky text-2xl" onClick={incrementNumber}>+</button>
                             <p>{counter}</p>
@@ -56,7 +56,7 @@ const ItemCount = ({initalValue, stock, dataList}) => {
                 
             </div>
             { 
-                isInCart(dataList.id) && <NavLink to={"/cart"} ><button className="btn btn-primary">Terminar mi compra</button></NavLink> 
+                isInCart(data[0].id) && <NavLink to={"/cart"} ><button className="btn btn-primary">Terminar mi compra</button></NavLink> 
             }
         </div>
     )

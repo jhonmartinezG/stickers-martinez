@@ -22,6 +22,7 @@ module.exports = {
       'white': '#ffffff',
       'sky': '#0EA5E9',
       'brown': '#B48D54',
+      'black': '#000000'
     },
     extend: {},
   },

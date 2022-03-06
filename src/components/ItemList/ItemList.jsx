@@ -11,6 +11,7 @@ const ItemList = ({ data }) => {
       {
         data ? data.map((item) => (
           <Item 
+            key={item.id}
             id={item.id}
             img={item.pictureUrl}
             title={item.title}

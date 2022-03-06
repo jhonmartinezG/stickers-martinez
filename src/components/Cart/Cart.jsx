@@ -12,6 +12,7 @@ const Cart = () => {
 
   const clear = () => {
     setArrayProducts([])
+    setCuantity(0)
   }
 
   const deleteItem = (id) => {
@@ -41,15 +42,15 @@ const Cart = () => {
           <button type="button" className="btn btn-danger m-4" onClick={() => clear()}>Vaciar carrito</button>
           <div className='flex'>
             {arrayProducts.map(item => (
-              <div className='flex '>
-                <div className="card w-72 mx-3" key={item.id} >
+              <div className='flex ' key={item.id}>
+                <div className="card w-72 mx-3"  >
                   <img src={item.image} className="card-img-top" alt="..." style={{ width: '18rem', height: '18rem' }}/>
                     <div className="card-body">
                       <h4 className="card-text">{item.title}</h4>
                       <h5>{`$ ${item.price}`} </h5>
                       <h5>{`cantidad: ${item.cuantity}`} </h5>
                     </div>
-                      <button type="button" class="btn btn-danger" onClick={() => deleteItem(item.id)}>Eliminar</button>
+                      <button type="button" className="btn btn-danger" onClick={() => deleteItem(item.id)}>Eliminar</button>
                     </div>
                   </div>
                 ))}

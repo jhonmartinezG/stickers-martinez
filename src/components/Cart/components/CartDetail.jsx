@@ -16,7 +16,7 @@ const CartDetail = ({ total, shipping }) => {
             <h6>Total</h6>
             <p>{`$ ${total + shipping  }`}</p>
         </div>
-        <button type="button" class="btn btn-success">Realizar compra</button>
+        <button type="button" className="btn btn-success">Realizar compra</button>
     </div>
   )
 }

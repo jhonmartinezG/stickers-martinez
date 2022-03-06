@@ -11,10 +11,11 @@ const CartProvider = ({ children }) => {
       return arrayProducts.some(item => item.id === id)
     }
     const [total, setTotal] = useState(0)
+    const [info, setInfo] = useState(null)
 
 
   return (
-    <CartContext.Provider value={{arrayProducts, setArrayProducts, cuantity, setCuantity, isInCart, total, setTotal}}>
+    <CartContext.Provider value={{arrayProducts, setArrayProducts, cuantity, setCuantity, isInCart, total, setTotal, info, setInfo}}>
         {children}
     </CartContext.Provider>
   )
