@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const CartDetail = ({ total, shipping }) => {
   return (
@@ -6,17 +8,17 @@ const CartDetail = ({ total, shipping }) => {
         <h3>Mi carrito</h3>
         <div className='flex justify-between'>
             <p>Subtotal</p>
-            <p>{`$ ${total}`}</p>
+            <p>{`$ ${new Intl.NumberFormat().format(total)}`}</p>
         </div>
         <div className='flex justify-between'>
             <p>Envio</p>
-            <p>{`$ ${shipping}`}</p>
+            <p>{`$ ${new Intl.NumberFormat().format(shipping)}`}</p>
         </div>
         <div className='flex justify-between'>
             <h6>Total</h6>
-            <p>{`$ ${total + shipping  }`}</p>
+            <p>{`$ ${new Intl.NumberFormat().format(total + shipping)  }`}</p>
         </div>
-        <button type="button" className="btn btn-success">Realizar compra</button>
+        <Link to={'/cart/checkout'}><button type="button" className="btn btn-success">Realizar compra</button></Link> 
     </div>
   )
 }

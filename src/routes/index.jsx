@@ -7,6 +7,8 @@ import Navbar from '../components/Navbar/Navbar';
 import Home from '../container/Home/Home';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import Cart from '../components/Cart/Cart';
+import Footer from '../components/Footer/Footer';
+
 
 const Rutas = () => {
   return (
@@ -18,7 +20,9 @@ const Rutas = () => {
             <Route path='/category/:category' element={<ItemListContainer />} />
             <Route path='/quienessomos' element={<QuienesSomos/>}/>
             <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+            <Route path='cart/checkout' element={<Checkout />}></Route>
         </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

@@ -1,0 +1,37 @@
+.title-container {
+    background-image: url('https://cdn.shopify.com/s/files/1/0318/3188/3907/files/Mesa_de_trabajo_16_fe7b1df4-36b6-4300-b6e8-7de2b0e9eae9.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+}
+
+.text-container {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a08064;
+    color: azure;
+}
+
+.developer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+}

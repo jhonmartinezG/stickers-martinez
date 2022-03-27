@@ -13,8 +13,8 @@ const ItemDetail = ({ data }) => {
         <div className="col-md-8">
           <div className="card-body">
             <h2 className="card-text">{data[0].title}</h2>
-            <h3 className="card-title">{data[0].description}</h3>
-            <h3 className="card-title">{`$ ${data[0].price}`}</h3>
+            <h3 className="card-title mt-10">{data[0].description}</h3>
+            <h3 className="card-title">{`$ ${data[0].price} COP`}</h3>
             <ItemCount initalValue={data[0].initalValue} stock={data[0].stock} data={data}/>
           </div>
         </div>
