@@ -1,4 +1,4 @@
-import { collection, getDocs } from 'firebase/firestore';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 import React, {useState, useEffect, useContext} from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../../context/CartProvider';
@@ -23,6 +23,8 @@ const ItemListContainer = ({ greeting }) => {
       setInfo(result)
     }
   }
+
+  
 
   useEffect(() =>{
       getData()

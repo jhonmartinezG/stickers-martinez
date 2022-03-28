@@ -58,8 +58,6 @@ const Cart = () => {
               <CartDetail total={total} shipping={20000} />
             </div>
           </div>
-          
-        
       } 
     </div>
   </div>
