@@ -115,8 +115,8 @@ const handleChangeClient = (e) => {
       } 
       {
 
-        <div className='m-auto flex flex-col justify-center item-center h-screen '>
-          {success && <h1 >su orden es {orders}</h1>}
+        <div className='m-auto flex flex-col justify-center item-center h-screen text-center'>
+          {success && <h1 className='text-lg' >su orden es {orders}</h1>}
         </div>
         
       }
