@@ -5,11 +5,10 @@ const QuienesSomos = () => {
   return (
     <div>
       <div className='w-100 title-container h-96'>
-        <h1>Creamos los mejores diseños</h1>
-        <h3>Para hacer de tu hogar un lugar increible</h3>
+        
       </div>
       <div className='w-100 text-container h-96'>
-        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima dolores nam ut animi eius modi, ex harum ipsa autem quaerat laboriosam explicabo praesentium facilis velit doloremque nihil. Dignissimos, deleniti dolorem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quis nemo quos fugiat accusantium nam optio corrupti, blanditiis numquam dicta ex molestiae reprehenderit voluptatum ad rem perspiciatis fugit voluptatem tempora? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus deleniti adipisci fuga odit sequi deserunt blanditiis quas temporibus, natus, quod fugit dolore iusto, dicta quisquam. Recusandae quo quos numquam itaque.</h3>
+        <h3 className='lorem'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima dolores nam ut animi eius modi, ex harum ipsa autem quaerat laboriosam explicabo praesentium facilis velit doloremque nihil. Dignissimos, deleniti dolorem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quis nemo quos fugiat accusantium nam optio corrupti, blanditiis numquam dicta ex molestiae reprehenderit voluptatum ad rem perspiciatis fugit voluptatem tempora? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus deleniti adipisci fuga odit sequi deserunt blanditiis quas temporibus, natus, quod fugit dolore iusto, dicta quisquam. Recusandae quo quos numquam itaque.</h3>
       </div>
       <div className='w-100 developer-container h-96' >
         <h4>

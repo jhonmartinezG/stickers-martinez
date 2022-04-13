@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column !important;
+        padding: 0 !important;
+        justify-content: center;
+        align-items: center;
+    }
+}

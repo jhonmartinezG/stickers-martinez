@@ -35,29 +35,34 @@ const Cart = () => {
         </Link>
       </div>
         : 
-        <div className='flex justify-between wrap'>
-          <div>
-          <button type="button" className="btn btn-danger m-4" onClick={() => clear()}>Vaciar carrito</button>
-          <div className='flex'>
-            {arrayProducts.map(item => (
-              <div className='flex ' key={item.id}>
-                <div className="card w-72 mx-3"  >
-                  <img src={item.image} className="card-img-top" alt="..." style={{ width: '18rem', height: '18rem' }}/>
-                    <div className="card-body">
-                      <h4 className="card-text">{item.title}</h4>
-                      <h5>{`$ ${item.price}`} </h5>
-                      <h5>{`cantidad: ${item.cuantity}`} </h5>
-                    </div>
-                     <button type="button" className="btn btn-danger" onClick={() => deleteItem(item.id)}>Eliminar</button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className='w-28'>
+        
+
+        <div>
+          <div className='w-fit '>
               <CartDetail total={total} shipping={20000} />
-            </div>
           </div>
+          <div className='flex justify-between items-center wrap'>
+            <div>
+              <button type="button" className="btn btn-danger m-4" onClick={() => clear()}>Vaciar carrito</button>
+              <div className='flex'>
+                {arrayProducts.map(item => (
+                  <div className='flex ' key={item.id}>
+                    <div className="card w-72 mx-3"  >
+                      <img src={item.image} className="card-img-top" alt="..." style={{ width: '18rem', height: '18rem' }}/>
+                        <div className="card-body">
+                          <h4 className="card-text">{item.title}</h4>
+                          <h5>{`$ ${item.price}`} </h5>
+                          <h5>{`cantidad: ${item.cuantity}`} </h5>
+                        </div>
+                        <button type="button" className="btn btn-danger" onClick={() => deleteItem(item.id)}>Eliminar</button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              
+          </div>
+        </div>
       } 
     </div>
   </div>

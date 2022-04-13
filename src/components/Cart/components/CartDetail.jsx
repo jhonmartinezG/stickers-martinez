@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './CartDetail.css'
 
 
 const CartDetail = ({ total, shipping }) => {
   return (
-    <div className='w-80 justify-center items-center bg-gray-light p-10 '>
+    <div className='detail w-80 justify-center items-center bg-gray-light p-10 '>
         <h3>Mi carrito</h3>
         <div className='flex justify-between'>
             <p>Subtotal</p>
@@ -18,7 +19,7 @@ const CartDetail = ({ total, shipping }) => {
             <h6>Total</h6>
             <p>{`$ ${new Intl.NumberFormat().format(total + shipping)  }`}</p>
         </div>
-        <Link to={'/cart/checkout'}><button type="button" className="btn btn-success">Realizar compra</button></Link> 
+        <Link to={'/cart/checkout'}><button type="button" className="btn btn-success m-auto">Realizar compra</button></Link> 
     </div>
   )
 }

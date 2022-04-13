@@ -2,19 +2,12 @@ import React from 'react';
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { CartContext } from '../../context/CartProvider';
-import empty from '../../assets/empty.png'
 import useFirestore from '../../hooks/useFirestore';
 import { useState } from 'react';
 
-
-
-
-
-
-
 const Checkout = () => {
 
-  const { arrayProducts, cuantity, total } = useContext(CartContext)
+  let { arrayProducts, cuantity, total, setCuantity, setArrayProducts } = useContext(CartContext)
   const { createOrder, orders, success } = useFirestore()
 
   const [form, setForm] = useState({
@@ -46,18 +39,20 @@ const handleChangeClient = (e) => {
   const totalCost = new Intl.NumberFormat().format(total + 20000);
 
 
-  
-
   const generateOrderSubmit = (e) => {
     e.preventDefault()
     createOrder({ clientData: form})
 
-
     Swal.fire(
       'Compra realizada ',
-      `Tu compra ha sido registrada y guardada con exito ${orders.id}`,
+      `Tu compra ha sido registrada y guardada con exito`,
       'success'
     )
+
+    setArrayProducts([])
+    setCuantity(0)
+    
+
   }
 
 
@@ -115,12 +110,15 @@ const handleChangeClient = (e) => {
       </form> 
     </div>  :
     <div className='m-auto flex flex-col justify-center item-center'>
-      <img src={empty} alt="empty" className='w-3/6' />
-      <h4>No hay elementos seleccionados, por favor vuelve al inicio y selecciona los elementos que deseas comprar</h4>
+      <h4>Gracias por su compra</h4>
     </div> 
       } 
       {
-        success && <h1>su orden es {orders}</h1>
+
+        <div className='m-auto flex flex-col justify-center item-center h-screen '>
+          {success && <h1 >su orden es {orders}</h1>}
+        </div>
+        
       }
     </>
     

@@ -35,3 +35,13 @@
     border-radius: 50%;
     margin: auto;
 }
+
+@media screen and (max-width: 480px) {
+    .text-container {
+        font-size: 10px !important;
+    }
+
+    .lorem {
+        font-size: 15px;
+    }
+}

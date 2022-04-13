@@ -5,12 +5,12 @@ export const CartContext = createContext()
 
 const CartProvider = ({ children }) => {
 
-    const [arrayProducts, setArrayProducts] = useState([])
-    const [cuantity, setCuantity] = useState(0)
+    let  [arrayProducts, setArrayProducts] = useState([])
+    let [cuantity, setCuantity] = useState(0)
     const isInCart = (id) => {
       return arrayProducts.some(item => item.id === id)
     }
-    const [total, setTotal] = useState(0)
+    let [total, setTotal] = useState(0)
     const [info, setInfo] = useState(null)
 
 

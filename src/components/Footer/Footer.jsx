@@ -14,7 +14,7 @@ const Footer = () => {
                 <img className='img-thumbnail img-fluid rounded-circle cursor-pointer' style={{ width: '70px' }} src={logo} alt="" />
             </Link>
         </div>
-        <div>
+        <div className='list'>
             <h3>Productos</h3>
             <ul>
                 <li>Sillas</li>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <li>Espejos</li>
             </ul>
         </div>
-        <div>
+        <div className='list'>
             <h3>Servicios</h3>
             <ul>
                 <li>Política de Reembolso</li>
@@ -32,9 +32,9 @@ const Footer = () => {
                 <li>Términos y Condiciones</li>
             </ul>
         </div>
-        <div>
+        <div className='list'>
             <h3>Redes Sociales</h3>
-            <ul className='flex justify-around mt-10'>
+            <ul className='flex justify-between mt-10'>
                 <img className='w-10 h-10' src={instagram} alt="instagram" />
                 <img className='w-10 h-10' src={linkedin} alt="linkedin" />
                 <img className='w-10 h-10' src={github} alt="github" />

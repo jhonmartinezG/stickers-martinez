@@ -1,0 +1,8 @@
+
+
+@media screen and (max-width: 480px) {
+    .detail {
+        margin-left: 5px;
+        width: 150%;
+    }
+}
